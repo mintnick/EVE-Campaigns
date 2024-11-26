@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import CampaignCard from './CampaignCard.vue';
 
-const props = defineProps({
+defineProps({
   title: String,
   data: Object,
   server: String,
 })
-
 </script>
 
 <template>
@@ -17,5 +16,4 @@ const props = defineProps({
 </template>
 
 <style lang="css" scoped>
-
 </style>
