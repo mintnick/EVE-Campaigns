@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import ServerSection from './components/ServerSection.vue';
 
 const loading = ref(true)
 const drawer = ref(false)
@@ -43,7 +44,7 @@ async function fetchData() {
 }
 
 onMounted(async () => {
-  // await fetchData()
+  await fetchData()
 })
 </script>
 
@@ -88,13 +89,22 @@ onMounted(async () => {
       </v-list>
     </v-navigation-drawer>
 
-    <v-main id="main" class="d-flex flex-column align-center">
+    <v-main id="main" class="d-flex flex-column align-center mt-1">
       <div v-if="loading" class="lds-dual-ring"></div>
+      <ServerSection v-if="sr_data.length" title="晨曦" :data="sr_data" server="sr" />
+      <ServerSection v-if="tq_data.length" title="宁静" :data="tq_data" server="tq"/>
+      <ServerSection v-if="if_data.length" title="曙光" :data="if_data" server="if"/>
     </v-main>
   </v-app>
 </template>
 
 <style scoped>
+#v-app {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/wallpaper.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 #app a {
   color: #0E0E0E;
 }

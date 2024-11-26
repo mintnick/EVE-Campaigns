@@ -7,9 +7,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --main-text-color: #0E0E0E;
-  --link-text-color: #171869;
-  --highlight-color: #b06ad1;
+  --main-text-color: #fefefe;
+  --link-text-color: #c4ff94;
+  --highlight-color: #FAB12F;
+  --countdown-color: #FA4032;
 }
 
 @font-face {
@@ -32,6 +33,10 @@ a:visited {
 
 .highlight {
   color: var(--highlight-color);
+}
+
+.countdown {
+  color: var(--countdown-color);
 }
 
 /* Loading ring */
