@@ -68,7 +68,7 @@ updateCountdown()
 </script>
 
 <template>
-  <v-sheet :elevation="7" :height="150" :width="180" class="text-center ma-2 ma-md-4" :style="getThumbnail()">
+  <v-sheet :elevation="7" :width="180" class="text-center ma-2 ma-md-4" :style="getThumbnail()">
     <h3 class="highlight">{{ item?.system_name + ' ' + type}}</h3>
     <a :href="`https://evehu.org/${server}/alliance/${item?.defender_id}`" target="_blank"><h3 class="text-center">{{ item?.alliance_name }}</h3></a>
 
@@ -87,7 +87,7 @@ updateCountdown()
 
     <p v-if="countdown">距开始还有：</p>
     <p v-if="countdown" class="countdown">{{ countdown }}</p>
-    <p v-else>已开始</p>
+    <p v-else>进攻方进度</p>
   </v-sheet>
 </template>
 
